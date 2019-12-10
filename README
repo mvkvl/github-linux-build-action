@@ -1,0 +1,7 @@
+## Example usage
+
+```
+uses: mvkvl/github-linux-build-action@v1
+with:
+  who-to-greet: 'Mona the Octocat'
+```

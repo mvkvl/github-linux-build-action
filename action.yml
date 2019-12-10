@@ -1,0 +1,21 @@
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  command:  # id of input
+    description: 'build command'
+    required: true
+  args:
+    description: 'build command arguments'
+    required: false
+  artifact:
+    description: 'generated artifact prefix'
+    required: false
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
